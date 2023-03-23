@@ -16,6 +16,9 @@ public interface ProductoRepository extends CrudRepository<Producto, Integer> {
             value = "SELECT * FROM productos WHERE ID = ?")
     List<Producto> getByProducto(int id);
 
+//    @Query(nativeQuery = true,
+//            value = "SELECT * FROM productos")
+//    List<Producto> getAllProducto();
 
     List<Producto> findByIdCategoriaOrderByNombreAsc(int idCategoria);
 

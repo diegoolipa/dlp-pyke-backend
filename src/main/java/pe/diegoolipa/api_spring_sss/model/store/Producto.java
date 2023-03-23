@@ -1,10 +1,9 @@
 package pe.diegoolipa.api_spring_sss.model.store;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
-
 @Data
 @Entity
 @Table(name = "productos")
@@ -35,7 +34,7 @@ public class Producto {
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
-    //TODA LA LISTA DE PRODUCTOS QUE PERTENECE A UNA COMPRA
-    @OneToMany(mappedBy = "producto")
-    private List<ComprasProducto> comprasProductos;
+//    //TODA LA LISTA DE PRODUCTOS QUE PERTENECE A UNA COMPRA
+//    @OneToMany(mappedBy = "producto")
+//    private List<ComprasProducto> comprasProductos;
 }

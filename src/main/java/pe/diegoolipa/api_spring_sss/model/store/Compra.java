@@ -5,7 +5,9 @@ import lombok.Data;
 import pe.diegoolipa.api_spring_sss.model.person.Cliente;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -34,7 +36,7 @@ public class Compra {
     private Cliente cliente;
 
     //TODA LA LISTA DE PRODUCTOS QUE PERTENECE A UNA COMPRA
-    @OneToMany(mappedBy = "compra")
-    private List<ComprasProducto> comprasProductos;
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
+    private Set<ComprasProducto> productos;
 
 }

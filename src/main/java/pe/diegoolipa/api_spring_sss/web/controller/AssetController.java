@@ -1,4 +1,4 @@
-package pe.diegoolipa.api_spring_sss.controller;
+package pe.diegoolipa.api_spring_sss.web.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +31,7 @@ public class AssetController {
         Resource resource = fileSystemStorageService.loadAsResource(filename);
         String contentType = Files.probeContentType(resource.getFile().toPath());
 
-        log.info("El tipo de contenido para {} es {} D'lipa", filename, contentType);
+        log.info("El tipo de contenido para {} es {} Dlipa", filename, contentType);
 
         return ResponseEntity
                 .ok()

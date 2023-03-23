@@ -1,4 +1,4 @@
-package pe.diegoolipa.api_spring_sss.controller;
+package pe.diegoolipa.api_spring_sss.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,7 @@ import pe.diegoolipa.api_spring_sss.repository.LibroRepository;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/libros")
 public class LibroController {

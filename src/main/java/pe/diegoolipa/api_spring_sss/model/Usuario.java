@@ -23,9 +23,13 @@ public class Usuario {
     @Column(name = "fecha_act")
     private LocalDateTime fechaActualizacion;
 
+//    @PrePersist
+//    void asigarNombreCompleto(){}
+//
     @PrePersist
-    void asignarFechaCreacion(){
+    void asignar(){
         fechaCreacion = LocalDateTime.now();
+        nombre_completo = this.nombres.toUpperCase() + ", " + this.apellidos;
     }
 
     @PreUpdate
